@@ -28,7 +28,7 @@ function send_signal(id, side, state)
 		side = side,
 		state = state
 	}
-	local msg = json.encode(msg)
+	msg = json.encode(msg)
 	modem.transmit(826, 0, msg)
 end
 
