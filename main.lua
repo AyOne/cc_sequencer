@@ -1,25 +1,16 @@
-local modem = peripheral.find("top")
+local modem = peripheral.find("modem")
 local json = require("json")
 local config_file = fs.open("config.json", "r")
 local config = json.decode(config_file.readAll())
 config_file.close()
 
 
-
-
-while config.loop do
-	for i = 1, #config.sequence do
-		execute(config.sequence[i])
-		if (config.sequence[i].deplay ~= -1) then
-			sleep(config.delay / 1000)
-		end
+function main()
+	while true do
+		loop(1, config.sequence)
+		sleep(config.loopDelay / 1000)
 	end
-	sleep(config.loopDelay / 1000)
 end
-
-
-
-
 
 
 function send_signal(id, side, state)
@@ -37,7 +28,7 @@ function loop(count,sequence)
 		for i = 1, #sequence do
 			execute(sequence[i])
 			if (sequence[i].deplay ~= -1) then
-				sleep(config.delay / 1000)
+				sleep(sequence[i].delay / 1000)
 			end
 		end
 	end
@@ -46,9 +37,11 @@ end
 
 function execute(node)
 	if (node.type == "loop") then
-		loop(node.count, node.sequence)
+		loop(node.length, node.sequence)
 	elseif (node.type == "signal") then
 		send_signal(node.id, node.side, node.state)
 	end
 end
-		
+
+
+main()
