@@ -95,6 +95,41 @@
 					"id":4
 				}
 			]
+		},
+		{
+			"type":"loop",
+			"length": 1,
+			"delay": 100,
+			"sequence":[
+				{
+					"type":"state",
+					"state":false,
+					"side":"back",
+					"delay":0,
+					"id":1
+				},
+				{
+					"type":"state",
+					"state":false,
+					"side":"back",
+					"delay":0,
+					"id":2
+				},
+				{
+					"type":"state",
+					"state":false,
+					"side":"back",
+					"delay":0,
+					"id":3
+				},
+				{
+					"type":"state",
+					"state":false,
+					"side":"back",
+					"delay":0,
+					"id":4
+				}
+			]
 		}
 	]
 }
