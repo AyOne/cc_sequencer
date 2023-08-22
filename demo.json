@@ -1,64 +1,96 @@
 {
 	"type":"entry",
-	"delay":1000,
+	"delay":3000,
 	"sequence":[
 		{
 			"type":"loop",
 			"length": 5,
+			"delay":500,
 			"sequence":[
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":true,
 					"delay":250,
 					"id":1
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":false,
 					"delay":-1,
 					"id":1
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":true,
 					"delay":250,
 					"id":2
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":false,
 					"delay":-1,
 					"id":2
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":true,
 					"delay":250,
 					"id":3
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":false,
 					"delay":-1,
 					"id":3
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":true,
 					"delay":250,
 					"id":4
 				},
 				{
-					"type":"signal",
+					"type":"state",
 					"side":"back",
 					"state":false,
+					"delay":-1,
+					"id":4
+				}
+			]
+		},
+		{
+			"type":"loop",
+			"length": 30,
+			"delay": 100,
+			"sequence":[
+				{
+					"type":"random",
+					"side":"back",
+					"delay":-1,
+					"id":1
+				},
+				{
+					"type":"random",
+					"side":"back",
+					"delay":-1,
+					"id":2
+				},
+				{
+					"type":"random",
+					"side":"back",
+					"delay":-1,
+					"id":3
+				},
+				{
+					"type":"random",
+					"side":"back",
 					"delay":-1,
 					"id":4
 				}

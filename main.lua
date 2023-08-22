@@ -27,9 +27,12 @@ function loop(count,sequence)
 	for j=1, count do
 		for i = 1, #sequence do
 			execute(sequence[i])
-			if (sequence[i].deplay ~= -1 or sequence[i].deplay ~= nil) then
+			if (sequence[i].delay ~= -1 or sequence[i].delay ~= nil) then
 				sleep(sequence[i].delay / 1000)
 			end
+		end
+		if (sequence.delay ~= -1 or sequence.delay ~= nil) then
+			sleep(sequence.delay / 1000)
 		end
 	end
 end
@@ -40,8 +43,10 @@ function execute(node)
 		return loop(node.length, node.sequence)
 	elseif (node.type == "entry") then
 		return loop(1, node.sequence)
-	elseif (node.type == "signal") then
+	elseif (node.type == "state") then
 		return send_signal(node.id, node.side, node.state)
+	elseif (node.type == "random") then
+		return send_signal(node.id, node.side, math.random(0,1) == 1)
 	end
 end
 
