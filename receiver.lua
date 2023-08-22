@@ -9,9 +9,8 @@ modem.open(826)
 
 
 
-
-for i in {"left", "right", "top", "bottom", "front", "back"} do
-	redstone.setOutput(i, false)
+for k,v in pairs({"left", "right", "top", "bottom", "front", "back"}) do
+	redstone.setOutput(v, false)
 end
 
 redstone.setOutput("left", false)
