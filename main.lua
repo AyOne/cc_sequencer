@@ -27,11 +27,11 @@ function loop(count,sequence)
 	for j=1, count do
 		for i = 1, #sequence do
 			execute(sequence[i])
-			if (sequence[i].delay ~= -1 or sequence[i].delay ~= nil) then
+			if sequence[i].delay then
 				sleep(sequence[i].delay / 1000)
 			end
 		end
-		if (sequence.delay ~= -1 or sequence.delay ~= nil) then
+		if sequence.delay then
 			sleep(sequence.delay / 1000)
 		end
 	end

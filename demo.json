@@ -18,7 +18,7 @@
 					"type":"state",
 					"side":"back",
 					"state":false,
-					"delay":-1,
+					"delay":0,
 					"id":1
 				},
 				{
@@ -32,7 +32,7 @@
 					"type":"state",
 					"side":"back",
 					"state":false,
-					"delay":-1,
+					"delay":0,
 					"id":2
 				},
 				{
@@ -46,7 +46,7 @@
 					"type":"state",
 					"side":"back",
 					"state":false,
-					"delay":-1,
+					"delay":0,
 					"id":3
 				},
 				{
@@ -60,7 +60,7 @@
 					"type":"state",
 					"side":"back",
 					"state":false,
-					"delay":-1,
+					"delay":0,
 					"id":4
 				}
 			]
@@ -73,25 +73,25 @@
 				{
 					"type":"random",
 					"side":"back",
-					"delay":-1,
+					"delay":0,
 					"id":1
 				},
 				{
 					"type":"random",
 					"side":"back",
-					"delay":-1,
+					"delay":0,
 					"id":2
 				},
 				{
 					"type":"random",
 					"side":"back",
-					"delay":-1,
+					"delay":0,
 					"id":3
 				},
 				{
 					"type":"random",
 					"side":"back",
-					"delay":-1,
+					"delay":0,
 					"id":4
 				}
 			]
