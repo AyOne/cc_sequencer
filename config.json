@@ -29,7 +29,7 @@
 				{
 					"type":"signal",
 					"side":"back",
-					"state":true,
+					"state":false,
 					"delay":-1,
 					"id":2
 				},
@@ -43,7 +43,7 @@
 				{
 					"type":"signal",
 					"side":"back",
-					"state":true,
+					"state":false,
 					"delay":-1,
 					"id":3
 				},
@@ -57,7 +57,7 @@
 				{
 					"type":"signal",
 					"side":"back",
-					"state":true,
+					"state":false,
 					"delay":-1,
 					"id":4
 				}

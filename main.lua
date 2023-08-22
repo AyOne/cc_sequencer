@@ -27,7 +27,7 @@ function loop(count,sequence)
 	for j=1, count do
 		for i = 1, #sequence do
 			execute(sequence[i])
-			if (sequence[i].deplay ~= -1) then
+			if (sequence[i].deplay ~= -1 or sequence[i].deplay ~= nil) then
 				sleep(sequence[i].delay / 1000)
 			end
 		end
@@ -37,9 +37,9 @@ end
 
 function execute(node)
 	if (node.type == "loop") then
-		loop(node.length, node.sequence)
+		return loop(node.length, node.sequence)
 	elseif (node.type == "signal") then
-		send_signal(node.id, node.side, node.state)
+		return send_signal(node.id, node.side, node.state)
 	end
 end
 
