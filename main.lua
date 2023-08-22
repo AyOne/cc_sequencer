@@ -7,8 +7,8 @@ config_file.close()
 
 function main()
 	while true do
-		loop(1, config.sequence)
-		sleep(config.loopDelay / 1000)
+		execute(config)
+		sleep(config.delay / 1000)
 	end
 end
 
@@ -38,6 +38,8 @@ end
 function execute(node)
 	if (node.type == "loop") then
 		return loop(node.length, node.sequence)
+	elseif (node.type == "entry") then
+		return loop(1, node.sequence)
 	elseif (node.type == "signal") then
 		return send_signal(node.id, node.side, node.state)
 	end

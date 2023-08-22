@@ -1,5 +1,6 @@
 {
-	"loopDelay":1000,
+	"type":"entry",
+	"delay":1000,
 	"sequence":[
 		{
 			"type":"loop",
